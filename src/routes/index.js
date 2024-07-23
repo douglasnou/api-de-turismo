@@ -8,7 +8,17 @@ const routes = (app) =>{
     ("Sucesso ao conectar."));
 
     app.use(express.json(), destinos, atrativos);
-    app.use(cors());
+
+    app.use((res, req, next)=>{
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+        res.header("Access-Control-Allow-Headers", "Content-Type");
+
+        app.use(cors());
+
+        next();
+    })
+    
 };
 
 export default routes;
