@@ -9,7 +9,7 @@ const routes = (app) =>{
 
     app.use(express.json(), destinos, atrativos);
     app.use(cors({
-        origin: '*'
+        origin: 'http://localhost:5173/'
     }));
 };
 
