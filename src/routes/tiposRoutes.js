@@ -1,6 +1,6 @@
 import express from "express";
-import { CorsMiddlewares } from "../middlewares/corsMiddlewares";
-import { TiposController } from "../controllers/tiposControllers";
+import { CorsMiddlewares } from "../middlewares/corsMiddlewares.js";
+import { TiposController } from "../controllers/tiposControllers.js";
 
 const routes = express.Router();
 
